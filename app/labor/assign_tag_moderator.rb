@@ -61,10 +61,6 @@ module AssignTagModerator
     tag.mod_chat_channel&.slug
   end
 
-  def self.community_mod_newsletter_enabled?
-    SiteConfig.mailchimp_api_key.present? && SiteConfig.mailchimp_community_moderators_id.present?
-  end
-
   def self.tag_mod_newsletter_enabled?
     SiteConfig.mailchimp_api_key.present? && SiteConfig.mailchimp_tag_moderators_id.present?
   end
